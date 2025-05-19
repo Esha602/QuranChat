@@ -1,5 +1,18 @@
 import streamlit as st
 import requests
+import os
+import signal
+
+# Find and kill process using port 8000
+!ps -fA | grep uvicorn
+
+# If any uvicorn process is running, kill it
+for line in os.popen("lsof -i :8000"):
+    if "LISTEN" in line:
+        pid = int(line.split()[1])
+        print(f"Killing process {pid} on port 8000")
+        os.kill(pid, signal.SIGKILL)
+
 
 st.title("Islamic Chatbot")
 session_id = st.session_state.get("session_id", "user123")
