@@ -4,7 +4,7 @@ redis
 faiss-cpu
 sentence-transformers
 transformers==4.31.0
-torch==2.0.1
+torch==2.4.1
 streamlit
 requests
 pydantic==1.10.13
