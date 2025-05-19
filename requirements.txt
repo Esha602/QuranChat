@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+redis
+faiss-cpu
+sentence-transformers
+transformers==4.31.0
+torch==2.0.1
+streamlit
+requests
+pydantic==1.10.13
+keras==2.11.0
+tensorflow==2.11.0
